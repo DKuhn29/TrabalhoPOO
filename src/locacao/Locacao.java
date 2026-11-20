@@ -1,6 +1,6 @@
 package locacao;
 import java.util.ArrayList;
-import equipamentos.Equipamento;
+import equipamento.Equipamento;
 import cliente.Cliente;
 
 public class Locacao {
@@ -34,12 +34,12 @@ public class Locacao {
 
     public boolean adicionarEquipamento(Equipamento e) {
         if (!e.isDisponivel()) {
-            System.out.println("O equipamento " + e.getNome() + "já está alugado");
+            System.out.println("O equipamento " + e.getDescricao() + "já está alugado");
             return false;
         }
         for (int i = 0; i < this.itens.size(); i++) {
-            if (itens.get(i).getEquipamento().getId() == e.getId()) {
-                System.out.println("O equipamento "+ e.getNome() + " já foi alugado");
+            if (itens.get(i).getEquipamento().getCodigo() == e.getCodigo()) {
+                System.out.println("O equipment "+ e.getDescricao() + " já foi alugado");
                 return false;
             }
         }
@@ -65,7 +65,7 @@ public class Locacao {
         int diasAtraso = diasUsados - this.dias;
         if (diasAtraso > 0) {
             for (int i = 0; i < itens.size(); i++) {
-                multa += itens.get(i).getEquipamento().getValorDiaria() * 0.5 * diasAtraso;
+                multa += itens.get(i).getEquipamento().getDiaria() * 0.5 * diasAtraso;
             }
         }
 
@@ -80,7 +80,7 @@ public class Locacao {
         System.out.println("Dias: " + this.dias + " - Situação: " + this.status);
         for (int i = 0; i < itens.size(); i++) {
             ItemLocacao item = itens.get(i);
-            System.out.println("Nome: " + item.getEquipamento().getNome()
+            System.out.println("Nome: " + item.getEquipamento().getDescricao()
                     + ": R$ " + item.calcularValor());
         }
         System.out.println("Total: R$ " + calcularValorTotal());

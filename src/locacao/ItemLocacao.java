@@ -1,6 +1,6 @@
 package locacao;
 
-import equipamentos.Equipamento;
+import equipamento.Equipamento;
 
 public class ItemLocacao {
     private Equipamento equipamento;
@@ -20,7 +20,7 @@ public class ItemLocacao {
     }
 
     public double calcularValor() {
-        return equipamento.calcularValor(dias);
+        return equipamento.calcularValorDiaria(dias);
     }
 
 }
