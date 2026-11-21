@@ -10,6 +10,15 @@ public class EquipamentoProjecao extends Equipamento{
         this.luminosidadeLumens = luminosidadeLumens;
         this.resolucao = resolucao;
     }
+
+    public int getLuminosidadeLumens(){
+        return this.luminosidadeLumens;
+    }
+
+    public Resolucao getResolucao(){
+        return this.resolucao;
+    }
+
     public double calcularValorDiaria(int dias){
         if(dias >= 5){
             return getDiaria() * dias * 0.90;

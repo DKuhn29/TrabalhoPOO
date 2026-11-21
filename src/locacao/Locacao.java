@@ -34,12 +34,12 @@ public class Locacao {
 
     public boolean adicionarEquipamento(Equipamento e) {
         if (!e.isDisponivel()) {
-            System.out.println("O equipamento " + e.getDescricao() + "já está alugado");
+            System.out.println("O equipamento " + e.getDescricao() + " já está alugado");
             return false;
         }
         for (int i = 0; i < this.itens.size(); i++) {
             if (itens.get(i).getEquipamento().getCodigo() == e.getCodigo()) {
-                System.out.println("O equipment "+ e.getDescricao() + " já foi alugado");
+                System.out.println("O equipamento "+ e.getDescricao() + " já foi alugado");
                 return false;
             }
         }
