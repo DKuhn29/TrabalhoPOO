@@ -5,8 +5,8 @@ public abstract class Equipamento{
     private double valorDiaria;
     private boolean disponivel;
 
-    public Equipamento(int codigoIndentificacao, String descricao, double valorDiaria, boolean disponivel){
-        this.codigoIndentificacao = codigoIndentificacao;
+    public Equipamento(int codigoIdentificacao, String descricao, double valorDiaria, boolean disponivel){
+        this.codigoIndentificacao = codigoIdentificacao;
         this.descricao = descricao;
         this.valorDiaria = valorDiaria;
         this.disponivel = disponivel;

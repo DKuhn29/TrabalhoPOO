@@ -8,6 +8,14 @@ public class EquipamentoIluminacao extends Equipamento{
         this.potenciaWatts = potenciaWatts;
         this.tipo = tipo;
     }
+
+    public int getPotenciaWatts() {
+        return this.potenciaWatts;
+    }
+
+    public TipoIluminacao getTipo(){
+        return this.tipo;
+    }
     public double calcularValorDiaria(int dias){
         return getDiaria() *dias*1.10;
     }
